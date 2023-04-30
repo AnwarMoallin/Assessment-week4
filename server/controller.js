@@ -12,6 +12,7 @@ module.exports = {
 
     res.status(200).send(randomCompliment);
   },
+
   getFortune: (req, res) => {
     const fortune = [
       "A lifetime friend shall soon be made.",
@@ -22,6 +23,12 @@ module.exports = {
       "It is better to be an optimist and proven a fool than to be a pessimist and be proven right.",
       "You are generous to an extreme and always think of the other fellow.",
     ];
-    
+
+    // returns random fortune
+    const randomIndex = Math.floor(Math.random() * fortune.length);
+    const randomFortune = fortune[randomIndex];
+    console.log(randomFortune);
+
+    res.status(200).send(randomFortune);
   },
 };
