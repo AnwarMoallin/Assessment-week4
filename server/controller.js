@@ -31,4 +31,13 @@ module.exports = {
 
     res.status(200).send(randomFortune);
   },
+  postNum: (req, res) => {
+    console.log(req.body);
+    res.send(`Number received ${req.body.val}`);
+  },
+  deleteNum: (req, res) => {
+    const data = req.params;
+    console.log(data);
+    res.send(`Number with id ${id} deleted`);
+  },
 };
